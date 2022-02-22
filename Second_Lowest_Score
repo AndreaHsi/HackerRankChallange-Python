@@ -1,0 +1,31 @@
+name_list = []
+score_list = []
+
+if __name__ == '__main__':
+    for _ in range(int(input())):
+        name = input()
+        name_list.append(name)
+        score = float(input())
+        score_list.append(score)
+        a_dic = dict(zip(name_list, score_list))
+  
+
+def get_key(val):
+    key_list = []
+    for key, value in a_dic.items():
+         if val == value:
+            key_list.append(key)
+    return sorted(key_list)
+ 
+
+mini = 1000
+min_val = min(a_dic.values())
+
+for n,s in a_dic.items():
+    if abs(s-min_val) > 0 and abs(s-min_val) < mini:
+        mini = abs(s - min_val)
+        
+
+ans = get_key(float(min_val+mini))
+for k in ans:
+    print(k)
