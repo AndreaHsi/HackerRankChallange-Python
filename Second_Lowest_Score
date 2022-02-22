@@ -27,5 +27,6 @@ for n,s in a_dic.items():
         
 
 ans = get_key(float(min_val+mini))
+
 for k in ans:
     print(k)
