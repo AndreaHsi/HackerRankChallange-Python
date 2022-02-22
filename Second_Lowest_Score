@@ -17,15 +17,23 @@ def get_key(val):
             key_list.append(key)
     return sorted(key_list)
  
+ 
+#in order to get the second lowest score, we substract the current value with the minimal value
+#if the value is the minimum, then the absolute value after substraction becomes 0, hence exclude this case from the if condition
+#The second lowest value is then the minimum after substraction
+#For example, if we have a list [1, 2, 2, 3]. 1 is the minimum. if we substract every element with the minimum, the list becomes [0, 1, 1, 2].
+#If we ignore the minimum 0, then second lowest value (after substraction) 1, which corresponds to the original value 2, is the answer.
+
 
 mini = 1000
 min_val = min(a_dic.values())
 
+#loop through the dictionary to find the second lowest value
 for n,s in a_dic.items():
     if abs(s-min_val) > 0 and abs(s-min_val) < mini:
         mini = abs(s - min_val)
         
-
+#use the function to get the corresponding key
 ans = get_key(float(min_val+mini))
 
 for k in ans:
