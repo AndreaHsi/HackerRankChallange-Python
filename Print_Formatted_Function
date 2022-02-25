@@ -1,8 +1,12 @@
 def print_formatted(n):
+
     for i in range(1,n+1):
+    
         for base in 'doXb':
-        #decimal: {0:d} octal:{0:o}...
+        #decimal: {0:d} octal:{0:o}, etc
+        
             print('{0:{width}{base}}'.format(i, width = n.bit_length(), base=base), end=' ')
-        #n.bit_length(): Return the number of bits necessary to represent an integer in binary, excluding the sign and leading zeros
+            #n.bit_length(): Return the number of bits necessary to represent an integer in binary, excluding the sign and leading zeros
+        
         print()
         #print a new line after each iteration, can also use: print("\n")
