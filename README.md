@@ -43,7 +43,7 @@ The lowest grade of 37.2 belongs to Tina. The second lowest grade of 37.21 belon
 
 
 
-# 2. String Formating Function
+# 2. Print String Formating Function
 
 Given an integer, n, print the following values for each i integer from 1 to n:
 Decimal
